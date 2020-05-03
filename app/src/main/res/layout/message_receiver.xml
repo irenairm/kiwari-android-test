@@ -1,45 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginStart="2dp"
+    >
 
     <TextView
-        android:id="@+id/messageReceiver"
-        android:layout_width="256dp"
+        android:id="@+id/message"
+        android:maxWidth="256dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autoSizeTextType="uniform"
         android:background="@drawable/message_received"
         android:padding="10dp"
         android:text="TextViewAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBZZZZZZZZZZZZZZZZZZZZ"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@color/white" />
 
     <TextView
         android:id="@+id/text_message_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="8dp"
-
+        android:layout_below="@id/message"
+        android:layout_alignBaseline="@id/text_message_time"
         android:text="23 March 2020"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/messageReceiver" />
+        />
 
     <TextView
         android:id="@+id/text_message_time"
-        android:layout_width="31dp"
-        android:layout_height="17dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/message"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@id/text_message_date"
+        android:layout_toRightOf="@id/text_message_date"
         android:text="11:40"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/text_message_date"
-        app:layout_constraintTop_toBottomOf="@+id/messageReceiver" />
+        android:textSize="12sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

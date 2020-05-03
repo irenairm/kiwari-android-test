@@ -24,7 +24,7 @@
                 android:id="@+id/userpic"
                 android:layout_width="76dp"
                 android:layout_height="51dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 tools:srcCompat="@tools:sample/avatars" />
 
@@ -34,9 +34,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="20dp"
-                android:textColor="@color/white"
                 android:layout_toRightOf="@id/userpic"
-                android:text="TextView" />
+                android:text=""
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/logout"
@@ -48,48 +48,52 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="6dp"
                 android:layout_marginRight="6dp"
-                android:textColor="@color/white"
-                android:text="Logout" />
+                android:text="@string/logout"
+                android:textColor="@color/white" />
         </RelativeLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="411dp"
-        android:layout_height="606dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appbar"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/appbar" />
 
     <LinearLayout
-        android:layout_width="422dp"
-        android:layout_height="59dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="359dp"
+        android:layout_height="0dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="339dp"
+            android:layout_width="316dp"
             android:layout_height="match_parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="339dp"
-                android:layout_height="33dp"
+                android:id="@+id/messageInput"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
                 android:layout_marginStart="12dp"
                 android:layout_marginLeft="12dp"
-                android:layout_marginTop="25dp" />
+                android:layout_marginTop="0dp"
+                android:paddingTop="10dp"
+                android:hint="Type a message"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <ImageButton
+        <Button
             android:id="@+id/sendButton"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@android:drawable/ic_menu_send" />
+            android:background="@android:drawable/ic_menu_send" />
+
     </LinearLayout>
 
 
