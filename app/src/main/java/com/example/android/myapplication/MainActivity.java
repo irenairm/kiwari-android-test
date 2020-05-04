@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                                        Toast.makeText(MainActivity.this, "Login success!", Toast.LENGTH_SHORT).show();
                                        Intent intent = new Intent(MainActivity.this, Chat.class);
                                        startActivity(intent);
-//                                        finish();
+                                       finish();
                                    }
                                    else {
                                        Toast.makeText(MainActivity.this, "Login failed!", Toast.LENGTH_SHORT).show();

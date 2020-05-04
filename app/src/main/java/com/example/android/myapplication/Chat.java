@@ -113,6 +113,7 @@ public class Chat extends AppCompatActivity  {
                 auth.getInstance().signOut();
                 Intent intent = new Intent(Chat.this, MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
